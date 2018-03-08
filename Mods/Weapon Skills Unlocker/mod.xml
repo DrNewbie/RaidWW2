@@ -1,0 +1,16 @@
+<table 
+		name="Weapon Skills Unlocker"
+		global_key = "Weapon Skills Unlocker"
+		merge_global = "false"
+		priority="100"
+		author="Dr_Newbie"
+		color="Color('bbbbbb')"
+		contact="https://modworkshop.net/"
+		description=" "
+		cannot_be_disabled="false"
+		early_init="false"
+	>
+	<hooks>
+		<hook source_file="lib/managers/weaponskillsmanager" file="weaponskillsmanager.lua"/>
+	</hooks>
+</table>

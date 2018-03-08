@@ -1,0 +1,27 @@
+<table 
+		name="Spawn More Enemies"
+		global_key = "SMEGKey"
+		merge_global = "false"
+		priority="100"
+		author="Dr_Newbie"
+		color="Color('bbbbbb')"
+		contact="http://modwork.shop/22028"
+		description=" "
+		cannot_be_disabled="false"
+		early_init="false"
+	>
+	<Localization directory="Loc" default="EN.json"/>
+	<auto_updates provider="modworkshop" id="22028" version="9" important="true"/>
+	<hooks>
+		<hook source_file="lib/managers/mission/elementspawnenemydummy" file="Hooks/elementspawnenemydummy.lua"/>
+		<hook source_file="lib/tweak_data/groupaitweakdata" file="Hooks/groupaitweakdata.lua"/>
+		<hook source_file="lib/tweak_data/group_ai/groupairaidtweakdata" file="Hooks/groupairaidtweakdata.lua"/>
+	</hooks>
+	<options build_menu="true">
+		<options title_id="sme_mods_menu_title_id">
+			<option name="Multiple" type="number" default_value="2" min="1" max="10" step="1" text="sme_mods_opt_multiple"/>
+			<option name="Divisor" type="number" default_value="0.25" min="0.01" max="1" step="0.01" text="sme_mods_opt_divisor"/>
+			<option name="Cloner" type="number" default_value="2" min="0" max="10" step="1" text="sme_mods_opt_cloner"/>
+		</options>
+	</options>
+</table>

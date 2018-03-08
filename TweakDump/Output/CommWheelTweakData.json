@@ -1,0 +1,1 @@
+{"arrow":{"texture_rect":[0,0,16,26],"texture":"guis\/textures\/menu_arrows"},"ball":{"texture_rect":[240,191,32,32],"texture":"guis\/textures\/hud_icons"},"test":{"texture_rect":[0,0,256,256],"texture":"guis\/textures\/pd2\/icon_detection"},"panel":{"texture_rect":[0,0,128,64],"texture":"ui\/ingame\/textures\/communication_wheel\/comm_wheel_white"}}

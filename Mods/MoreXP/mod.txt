@@ -1,0 +1,16 @@
+{
+	"name" : "More XP",
+	"description" : " ",
+	"author" : "Dr_Newbie",
+	"contact" : " ",
+	"blt_version" : 2,
+	"undisablable" : false,
+	"disable_safe_mode" : false,
+	"version" : "1",
+	"hooks" : [
+		{	
+			"hook_id" : "lib/tweak_data/operationstweakdata",
+			"script_path" : "operationstweakdata.lua"
+		}
+	]
+}

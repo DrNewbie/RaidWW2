@@ -1,0 +1,18 @@
+<table 
+		name="Pager"
+		priority="100"
+		author="Dr_Newbie"
+		color="Color('bbbbbb')"
+		contact="http://modwork.shop/22069"
+		description=" "
+		cannot_be_disabled="false"
+		early_init="false"
+	>
+	<Localization directory="Loc" default="EN.json"/>
+	<auto_updates provider="modworkshop" id="22069" version="3"/>
+	<hooks>
+		<hook source_file="lib/managers/group_ai_states/groupaistatebase" file="Hooks/groupaistatebase.lua"/>
+		<hook source_file="lib/units/enemies/cop/copmovement" file="Hooks/copmovement.lua"/>
+		<hook source_file="lib/units/enemies/cop/logics/coplogicinactive" file="Hooks/coplogicinactive.lua"/>
+	</hooks>
+</table>

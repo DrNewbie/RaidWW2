@@ -1,0 +1,17 @@
+<table 
+		name="Clone Raiders"
+		global_key = "CloneRaiders"
+		merge_global = "false"
+		priority="100"
+		author="Dr_Newbie"
+		color="Color('bbbbbb')"
+		contact="https://modworkshop.net/"
+		description=" "
+		cannot_be_disabled="false"
+		early_init="false"
+	>
+	<auto_updates provider="modworkshop" id="21657" version="3" important="true"/>
+	<hooks>
+		<hook source_file="lib/managers/criminalsmanager" file="criminalsmanager.lua"/>
+	</hooks>
+</table>

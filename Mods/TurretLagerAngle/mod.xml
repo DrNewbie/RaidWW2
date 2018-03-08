@@ -1,0 +1,16 @@
+<table 
+		name="MG42 Free Rotation"
+		merge_global = "false"
+		priority="100"
+		author="Dr_Newbie"
+		color="Color('bbbbbb')"
+		contact="http://modwork.shop/22038"
+		description=" "
+		cannot_be_disabled="false"
+		early_init="false"
+	>
+	<auto_updates provider="modworkshop" id="22038" version="2"/>
+	<hooks>
+		<hook source_file="lib/tweak_data/weapontweakdata" file="weapontweakdata.lua"/>
+	</hooks>
+</table>

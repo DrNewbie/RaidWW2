@@ -1,0 +1,16 @@
+{
+	"name" : "Show Me The Money",
+	"description" : " ",
+	"author" : "Dr_Newbie",
+	"contact" : " ",
+	"blt_version" : 2,
+	"undisablable" : false,
+	"disable_safe_mode" : false,
+	"version" : "1",
+	"hooks" : [
+		{	
+			"hook_id" : "lib/managers/goldeconomymanager",
+			"script_path" : "goldeconomymanager.lua"
+		}
+	]
+}

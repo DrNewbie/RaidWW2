@@ -1,0 +1,1 @@
+{"max_dis":6000,"decay_period":30,"low":0.1,"peak":0.95,"max_dis_mul":0.5,"assault_fade_end":0.25,"drama_actions":{"criminal_hurt":0.5,"criminal_dead":0.2,"criminal_disabled":0.1}}

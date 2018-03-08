@@ -1,0 +1,16 @@
+<table 
+		name="Turret No Overheating"
+		global_key = "Turret No Overheating"
+		merge_global = "false"
+		priority="100"
+		author="Dr_Newbie"
+		color="Color('bbbbbb')"
+		contact="https://modworkshop.net/"
+		description=" "
+		cannot_be_disabled="false"
+		early_init="false"
+	>
+	<hooks>
+		<hook source_file="lib/units/weapons/turretweapon" file="turretweapon.lua"/>
+	</hooks>
+</table>
