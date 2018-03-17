@@ -1,0 +1,22 @@
+<table 
+		name="Weapon Mods Glitcher"
+		global_key = "WMGerGKey"
+		merge_global = "false"
+		priority="100"
+		author="Dr_Newbie"
+		color="Color('bbbbbb')"
+		contact="http://modwork.shop/"
+		description=" "
+		cannot_be_disabled="false"
+		early_init="false"
+	>
+	<Localization directory="Loc" default="EN.json"/>
+	<hooks>
+		<hook source_file="lib/tweak_data/weaponfactorytweakdata" file="Hooks/weaponfactorytweakdata.lua"/>
+	</hooks>
+	<options build_menu="true">
+		<options title_id="wmger_mods_menu_title_id">
+			<option name="Multiple" type="number" default_value="0.1" min="0" max="1" step="0.01" text="wmger_mods_opt_multiple"/>
+		</options>
+	</options>
+</table>
