@@ -1,5 +1,5 @@
 function TeamAIMovement:carrying_bag()
-	return self._carry_unit and true or false
+	return self._carry_unit and alive(self._carry_unit) and true or false
 end
 
 function TeamAIMovement:set_carrying_bag(unit)
@@ -7,11 +7,11 @@ function TeamAIMovement:set_carrying_bag(unit)
 end
 
 function TeamAIMovement:carry_id()
-	return self._carry_unit and self._carry_unit:carry_data():carry_id()
+	return self:carrying_bag() and self._carry_unit:carry_data():carry_id()
 end
 
 function TeamAIMovement:carry_data()
-	return self._carry_unit and self._carry_unit:carry_data()
+	return self:carrying_bag() and self._carry_unit:carry_data()
 end
 
 function TeamAIMovement:carry_tweak()
