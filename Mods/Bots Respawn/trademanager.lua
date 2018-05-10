@@ -12,7 +12,7 @@ Hooks:PostHook(TradeManager, "update", "BotRespawn_Trade_update", function(self,
 		end
 		if trade_crim then
 			self._trade_crim = trade_crim
-			self._trade_crim_t = 120
+			self._trade_crim_t = tweak_data.player.damage.automatic_respawn_time
 		end
 	end
 	if self._trade_crim then

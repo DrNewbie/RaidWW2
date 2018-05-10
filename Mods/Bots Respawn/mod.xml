@@ -9,7 +9,7 @@
 		cannot_be_disabled="false"
 		early_init="false"
 	>
-	<auto_updates provider="modworkshop" id="22572" version="2"/>
+	<auto_updates provider="modworkshop" id="22572" version="3"/>
 	<hooks>
 		<hook source_file="lib/managers/trademanager" file="trademanager.lua"/>
 	</hooks>
