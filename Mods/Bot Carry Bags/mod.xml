@@ -9,7 +9,7 @@
 		cannot_be_disabled="false"
 		early_init="false"
 	>
-	<auto_updates provider="modworkshop" id="22567" version="12"/>
+	<auto_updates provider="modworkshop" id="22567" version="13"/>
 	<hooks>
 		<hook source_file="lib/managers/group_ai_states/groupaistatebase" file="groupaistatebase.lua"/>
 		<hook source_file="lib/units/player_team/teamaimovement" file="teamaimovement.lua"/>

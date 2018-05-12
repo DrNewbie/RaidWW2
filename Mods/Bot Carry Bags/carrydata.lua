@@ -1,12 +1,16 @@
 Hooks:PostHook(CarryData, "init", "BotCarry_CarryData_init", function(self)
 	if self._carry_id and tweak_data.carry and self._unit then
+		if self._carry_id == "ladder_4m" then
+			self._bot_cannot_carry = true
+		end
 		local carry_tweak_data = tweak_data.carry[self._carry_id]
 		if carry_tweak_data then
 			if carry_tweak_data.is_corpse then
 				self._bot_cannot_carry = true
-				return
 			end
 		end
+	else
+		self._bot_cannot_carry = true
 	end
 	self._linked_to = nil
 end)
