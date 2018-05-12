@@ -25,7 +25,6 @@ Hooks:PreHook(TeamAIDamage, "_check_bleed_out", "BotCarry_Dmg_check_bleed_out", 
 	end
 end)
 
-
 function TeamAIDamage:_teleport_carried_bag()
 	if self._unit:movement()._carry_unit then
 		self._unit:movement():throw_bag()
@@ -53,3 +52,7 @@ function TeamAIDamage:_teleport_carried_bag()
 	end
 	return false
 end
+
+Hooks:PreHook(TeamAIDamage, "_die", "BotCarry_Dmg_die", function(self)
+	self:_teleport_carried_bag()
+end)

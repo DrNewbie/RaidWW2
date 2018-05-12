@@ -19,6 +19,15 @@ function TeamAIMovement:carry_tweak()
 end
 
 function TeamAIMovement:throw_bag(target_unit, reason)
+	if not target_unit or not alive(target_unit) then
+		local _all_AI_criminals = managers.groupai:state():all_criminals() or {}	
+		for _, data in pairs(_all_AI_criminals) do
+			if data.unit and alive(data.unit) then
+				target_unit = data.unit
+				break
+			end
+		end
+	end
 	if not self:carrying_bag() then
 		return
 	end
