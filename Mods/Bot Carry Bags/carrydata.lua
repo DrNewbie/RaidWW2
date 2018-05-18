@@ -1,26 +1,9 @@
-Hooks:PostHook(CarryData, "init", "BotCarry_CarryData_init", function(self)
-	if self._carry_id and tweak_data.carry and self._unit then
-		if self._carry_id == "ladder_4m" then
-			self._bot_cannot_carry = true
-		end
-		local carry_tweak_data = tweak_data.carry[self._carry_id]
-		if carry_tweak_data then
-			if carry_tweak_data.is_corpse then
-				self._bot_cannot_carry = true
-			end
-		end
-	else
-		self._bot_cannot_carry = true
-	end
-	self._linked_to = nil
-end)
-
 Hooks:PostHook(CarryData, "unlink", "BotCarry_CarryData_unlink", function(self)
 	self._linked_to = nil
 end)
 
 Hooks:PostHook(CarryData, "update", "BotCarry_CarryData_update", function(self)
-	if not self._bot_cannot_carry and self._unit:interaction() and self._unit:interaction():active() then
+	if self._bot_can_carry and self._unit:interaction() and self._unit:interaction():active() then
 		local _all_AI_criminals = managers.groupai:state():all_AI_criminals() or {}	
 		for _, data in pairs(_all_AI_criminals) do
 			if data.unit and alive(data.unit) then
@@ -29,6 +12,7 @@ Hooks:PostHook(CarryData, "update", "BotCarry_CarryData_update", function(self)
 				else
 					if not data.unit:movement():carrying_bag() then
 						self:link_to(data.unit)
+						self._linked_to = data.unit
 						data.unit:movement():set_carrying_bag(self._unit)
 						break
 					end
