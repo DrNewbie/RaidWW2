@@ -9,9 +9,8 @@
 		cannot_be_disabled="false"
 		early_init="false"
 	>
-	<auto_updates provider="modworkshop" id="22566" version="3"/>
+	<auto_updates provider="modworkshop" id="22566" version="4"/>
 	<hooks>
-		<hook source_file="lib/units/beings/player/states/playerstandard" file="playerstandard.lua"/>
-		<hook source_file="lib/units/weapons/grenades/fraggrenade" file="fraggrenade.lua"/>
+		<hook source_file="lib/units/weapons/grenades/distractionrock" file="distractionrock.lua"/>
 	</hooks>
 </table>
