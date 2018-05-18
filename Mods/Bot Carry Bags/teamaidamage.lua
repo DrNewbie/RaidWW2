@@ -1,10 +1,3 @@
-tweak_data.ai_carry = {
-	throw_distance = 500,
-	throw_force = 100,
-	revive_distance_autopickup = 300,
-	death_distance_teleport = 300
-}
-
 Hooks:PostHook(TeamAIDamage, "revive", "BotCarry_Dmg_revive", function(self, reviving_unit)
 	local dropped_bag = self._unit:movement():was_carrying_bag()
 	if dropped_bag and alive(dropped_bag.unit) then

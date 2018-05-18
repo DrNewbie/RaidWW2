@@ -1,3 +1,10 @@
+tweak_data.ai_carry = {
+	throw_distance = 500,
+	throw_force = 150,
+	revive_distance_autopickup = 300,
+	death_distance_teleport = 300
+}
+
 function TeamAIMovement:carrying_bag()
 	return self._carry_unit and alive(self._carry_unit) and true or false
 end

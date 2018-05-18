@@ -28,8 +28,10 @@ Hooks:PostHook(CarryData, "update", "BotCarry_CarryData_update", function(self)
 				
 				else
 					if not data.unit:movement():carrying_bag() then
+						self:link_to(data.unit)
 						self._linked_to = data.unit
 						data.unit:movement():set_carrying_bag(self._unit)
+						break
 					end
 				end
 			end
