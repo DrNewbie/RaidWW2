@@ -1,0 +1,1 @@
+https://raw.githubusercontent.com/Nepgearsy/RAID-World-War-II-Hashlist/master/hashlist
