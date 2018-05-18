@@ -1,0 +1,16 @@
+<table 
+		name="Inspire"
+		merge_global = "false"
+		priority="100"
+		author="Dr_Newbie"
+		color="Color('bbbbbb')"
+		contact="http://modwork.shop/22619"
+		description=" "
+		cannot_be_disabled="false"
+		early_init="false"
+	>
+	<auto_updates provider="modworkshop" id="22619" version="1"/>
+	<hooks>
+		<hook source_file="lib/units/beings/player/playermovement" file="playermovement.lua"/>
+	</hooks>
+</table>
