@@ -132,13 +132,13 @@ if not WACApplyMyMenu and RequiredScript == "lib/managers/menu/menucomponentmana
 												_file:write('	WACApplyMyMenu = WACApplyMyMenu or {} \n')
 												_file:write('	WACApplyMyMenu._settings = WACApplyMyMenu._settings or {} \n')
 												_file:write('	WACApplyMyMenu._settings._apply = WACApplyMyMenu._settings._apply or {} \n')
+												_file:write('	WACApplyMyMenu._settings._apply["'.._u_fid..'"] = WACApplyMyMenu._settings._apply["'.._u_fid..'"] or {} \n')
 												for _, _xu_fid in pairs(_udd_apply[_udd_uapply[_u_fid]]) do
 													if _xu_fid ~= _u_fid then
 														local _new_loc_xadd = "Loc_"..Idstring('WACApplyMyMenuFN__'.._xu_fid):key()
 														self._settings._apply[_u_fid] = self._settings._apply[_u_fid] or {}
 														self._settings._apply[_u_fid][_xu_fid] = self._settings._apply[_u_fid][_xu_fid] or false
 														_r_name = "T_"..Idstring('WACApplyMyMenuApply__'.._u_fid..'-->'.._xu_fid):key()
-														_file:write('	WACApplyMyMenu._settings._apply["'.._u_fid..'"] = WACApplyMyMenu._settings._apply["'.._u_fid..'"] or {} \n')
 														_file:write('	WACApplyMyMenu._settings._apply["'.._u_fid..'"]["'.._xu_fid..'"] = WACApplyMyMenu._settings._apply["'.._u_fid..'"]["'.._xu_fid..'"] or false \n')
 														_file:write('	self:Toggle({ name = "'.._r_name..'", text = "'.._new_loc_xadd..'", value = WACApplyMyMenu._settings._apply["'.._u_fid..'"]["'.._xu_fid..'"] and true or false, callback = function() if WACApplyMyMenu._settings._apply["'.._u_fid..'"]["'.._xu_fid..'"] then WACApplyMyMenu._settings._apply["'.._u_fid..'"]["'.._xu_fid..'"] = false else WACApplyMyMenu._settings._apply["'.._u_fid..'"]["'.._xu_fid..'"] = true end for i, d in pairs(WACApplyMyMenu._settings._apply["'.._u_fid..'"]) do if i ~= "'.._xu_fid..'" then WACApplyMyMenu._settings._apply["'.._u_fid..'"][i] = false end end end }) \n')
 													end
@@ -163,7 +163,7 @@ if not WACApplyMyMenu and RequiredScript == "lib/managers/menu/menucomponentmana
 				end
 			end
 		}
-		self:MenuButton(uwu)
+		--self:MenuButton(uwu)
 	end
 
 	Hooks:Add("MenuComponentManagerInitialize", "WACApplyMyMenu.MenuComponentManagerInitialize", function(self)
