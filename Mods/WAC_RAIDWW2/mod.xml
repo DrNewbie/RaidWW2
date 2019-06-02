@@ -10,10 +10,11 @@
 		cannot_be_disabled="false"
 		early_init="false"
 	>
-	<auto_updates provider="modworkshop" id="24921" version="4"/>
+	<auto_updates provider="modworkshop" id="24921" version="5"/>
 	<Localization directory="Loc" default="EN.json"/>
 	<hooks>
 		<hook source_file="lib/managers/menu/menucomponentmanager" file="Menu/MyMenu.lua" />
 		<hook source_file="lib/tweak_data/weaponfactorytweakdata" file="Menu/ApplySet.lua" />
+		<hook source_file="lib/tweak_data/tweakdata" file="Menu/ApplyWpnHoldSet.lua" />
 	</hook>
 </table>
