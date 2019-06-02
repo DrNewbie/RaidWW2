@@ -10,7 +10,7 @@
 		cannot_be_disabled="false"
 		early_init="false"
 	>
-	<auto_updates provider="modworkshop" id="22036" version="2"/>
+	<auto_updates provider="modworkshop" id="22036" version="3"/>
 	<hooks>
 		<hook source_file="lib/units/beings/player/states/playerstandard" file="playerstandard.lua"/>
 	</hooks>

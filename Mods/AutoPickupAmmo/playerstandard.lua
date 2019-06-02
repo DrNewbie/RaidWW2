@@ -11,6 +11,14 @@ function PlayerStandard:_find_pickups(t, list)
 	end
 end
 
-Hooks:PostHook(PlayerStandard, "_update_check_actions", "Post.PlyStand._update_check_actions", function(self, t)
-	self:_find_pickups(t, {ammo_bag = true, ammo_bag_small = true})
+Hooks:PostHook(PlayerStandard, "_update_check_actions", "F_"..Idstring("Post.PlyStand._update_check_actions.Auto Pickup Ammo"):key(), function(self, t, dt)
+	if self._find_pickups_dt then
+		self._find_pickups_dt = self._find_pickups_dt - dt
+		if self._find_pickups_dt < 0 then
+			self._find_pickups_dt = nil
+		end
+	else
+		self._find_pickups_dt = 0.25
+		self:_find_pickups(t, {ammo_bag = true, ammo_bag_small = true})
+	end
 end)

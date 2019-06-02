@@ -11,7 +11,7 @@
 		early_init="false"
 	>
 	<Localization directory="Loc" default="EN.json"/>
-	<auto_updates provider="modworkshop" id="22028" version="9" important="true"/>
+	<auto_updates provider="modworkshop" id="22028" version="10" important="true"/>
 	<hooks>
 		<hook source_file="lib/managers/mission/elementspawnenemydummy" file="Hooks/elementspawnenemydummy.lua"/>
 		<hook source_file="lib/tweak_data/groupaitweakdata" file="Hooks/groupaitweakdata.lua"/>
