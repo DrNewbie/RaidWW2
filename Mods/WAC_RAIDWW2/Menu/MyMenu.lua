@@ -100,6 +100,14 @@ if not WACApplyMyMenu and RequiredScript == "lib/managers/menu/menucomponentmana
 					["WACApplyMyMenu_ReMenu_button_name"] = "uwu"
 				}
 				if tweak_data.weapon then
+					local _udd_apply = {}
+					local _udd_uapply = {}
+					for www, ddd in pairs(tweak_data.weapon.factory.parts) do
+						local _a_obj = tweak_data.weapon.factory.parts[www].a_obj
+						_udd_apply[_a_obj] = _udd_apply[_a_obj] or {'Invisible', 'Forced'}
+						table.insert(_udd_apply[_a_obj], www)
+						_udd_uapply[www] = _a_obj
+					end
 					for weapon_id, weapon_data in pairs(tweak_data.weapon) do
 						if weapon_data.name_id and weapon_data.AMMO_PICKUP then
 							local _fid = managers.weapon_factory:get_factory_id_by_weapon_id(weapon_id)
@@ -115,14 +123,6 @@ if not WACApplyMyMenu and RequiredScript == "lib/managers/menu/menucomponentmana
 											_file:write('if not WACApplyMyMenu then return end \n')
 											_file:write(_w_class..' = '.._w_class..' or class(BLTMenu) \n')
 											_file:write('RaidMenuHelper:CreateMenu({name = "'.._w_class..'__Menu", name_id = "'..weapon_data.name_id..'", inject_menu = "WACApplyMyMenuMenu", class = '.._w_class..'}) \n')
-											local _udd_apply = {}
-											local _udd_uapply = {}
-											for _, _u_fid in pairs(_udd) do
-												local _a_obj = tweak_data.weapon.factory.parts[_u_fid].a_obj
-												_udd_apply[_a_obj] = _udd_apply[_a_obj] or {'Invisible', 'Forced'}
-												table.insert(_udd_apply[_a_obj], _u_fid)
-												_udd_uapply[_u_fid] = _a_obj
-											end
 											for _, _u_fid in pairs(_udd) do
 												local _new_loc_add = "Loc_"..Idstring('WACApplyMyMenuFN__'.._u_fid):key()
 												local _f_class = "T_"..Idstring('WACApplyMyMenuF__'.._u_fid):key()
@@ -163,7 +163,7 @@ if not WACApplyMyMenu and RequiredScript == "lib/managers/menu/menucomponentmana
 				end
 			end
 		}
-		--self:MenuButton(uwu)
+		self:MenuButton(uwu)
 	end
 
 	Hooks:Add("MenuComponentManagerInitialize", "WACApplyMyMenu.MenuComponentManagerInitialize", function(self)
