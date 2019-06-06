@@ -1,0 +1,25 @@
+<table 
+		name="Carry Stacker (RAID WW2)"
+		merge_global = "false"
+		priority="100"
+		author=" "
+		color="Color('bbbbbb')"
+		contact="http://modwork.shop/25166"
+		description=" "
+		cannot_be_disabled="false"
+		early_init="false"
+	>
+	<auto_updates provider="modworkshop" id="25166" version="1" important="true"/>
+	<hooks>
+		<hook source_file="lib/managers/menumanager" 
+			file="lua/configuration_menu.lua"/>
+		<hook source_file="lib/managers/playermanager" 
+			file="lua/playermanager.lua"/>
+		<hook source_file="lib/units/beings/player/states/playerstandard" 
+			file="lua/playerstandard.lua"/>
+		<hook source_file="lib/units/beings/player/states/playercarry" 
+			file="lua/playercarry.lua"/>
+		<hook source_file="lib/units/interactions/interactionext" 
+			file="lua/interactionext.lua"/>
+	</hooks>
+</table>
