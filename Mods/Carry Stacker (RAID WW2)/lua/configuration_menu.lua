@@ -46,6 +46,4 @@ function BLT_CarryStacker:getWeightForType(carry_id)
 	return self.settings.movement_penalties[carry_type] ~= nil and ((100 - self.settings.movement_penalties[carry_type]) / 100) or 1
 end
 
-Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_BLT_CarryStacker", function(menu_manager)
-	BLT_CarryStacker:ResetWeights()
-end)
+BLT_CarryStacker:ResetWeights()
