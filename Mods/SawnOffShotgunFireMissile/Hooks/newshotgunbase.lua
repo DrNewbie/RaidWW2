@@ -4,7 +4,7 @@ Hooks:PostHook(NewShotgunBase, "init", "F_"..Idstring("Post.NewShotgunBase.init.
 	end
 end)
 
-local BarrageBomb = tweak_data.blackmarket:get_index_from_projectile_id(tweak_data.barrage.default.projectile_id)
+local BarrageBomb = tweak_data.blackmarket:get_index_from_projectile_id("mortar_shell")
 
 local BarrageBombPostNewShotgunBase_fire_raycast = NewShotgunBase._fire_raycast
 
@@ -14,7 +14,12 @@ function NewShotgunBase:_fire_raycast(user_unit, from_pos, direction, ...)
 			if Network:is_client() then
 				managers.network:session():send_to_host("request_throw_projectile", BarrageBomb, from_pos, direction, managers.network:session():local_peer():id() or 1)
 			else
-				ProjectileBase.throw_projectile(BarrageBomb, from_pos, direction, managers.network:session():local_peer():id() or 1)
+				local p_unit = ProjectileBase.throw_projectile(BarrageBomb, from_pos, direction, managers.network:session():local_peer():id() or 1)
+				if p_unit then
+					p_unit:base()._damage = p_unit:base()._damage * 10
+					p_unit:base()._player_damage = p_unit:base()._player_damage * 10
+					p_unit:base()._range = p_unit:base()._range * 10
+				end
 			end
 		end)
 		return {}

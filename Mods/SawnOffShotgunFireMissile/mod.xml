@@ -9,7 +9,7 @@
 		cannot_be_disabled="false"
 		early_init="false"
 	>
-	<auto_updates provider="modworkshop" id="25178" version="1" important="true"/>
+	<auto_updates provider="modworkshop" id="25178" version="2" important="true"/>
 	<Hooks directory="Hooks">
 		<hook file="newshotgunbase.lua" source_file="lib/units/weapons/shotgun/newshotgunbase"/>
 		<hook hook_id="lib/tweak_data/weapontweakdata" script_path="weapontweakdata.lua"/>
