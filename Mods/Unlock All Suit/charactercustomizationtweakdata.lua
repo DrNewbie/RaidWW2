@@ -1,0 +1,3 @@
+function CharacterCustomizationTweakData:_is_customization_default(key, customization)
+	return true
+end
