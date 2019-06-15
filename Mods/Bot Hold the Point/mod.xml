@@ -1,0 +1,39 @@
+<table 
+		name="Bot Hold the Point"
+		global_key = "BotHold"
+		merge_global = "false"
+		priority="100"
+		author=" "
+		color="Color('bbbbbb')"
+		contact="http://modwork.shop/25224"
+		description=" "
+		cannot_be_disabled="false"
+		early_init="false"
+	>
+	<auto_updates provider="modworkshop" id="25224" version="1" important="true"/>
+	<Localization directory="loc" default="en.json"/>
+	<hooks>
+		<hook source_file="lib/units/player_team/teamaimovement" 
+			file="lua/teamaimovement.lua"/>
+		<hook source_file="lib/managers/hud/hudteammateai" 
+			file="lua/hudteammateai.lua"/>
+		<hook source_file="lib/managers/group_ai_states/groupaistatebase" 
+			file="lua/groupaistatebase.lua"/>
+		<hook source_file="lib/tweak_data/tweakdata" 
+			file="lua/tweakdata.lua"/>
+	</hooks>
+	<keybinds>
+		<keybind keybind_id="ask_bot_hold_the_point"
+			name="ask_bot_hold_the_point_title_id"
+			localized="true"
+			run_in_menu="false"
+			run_in_game="true"
+			run_in_paused_game="false"
+			script_path="keybinds/RunF.lua" />
+	</keybinds>
+	<options build_menu="true">
+		<options title_id="ask_bot_hold_the_point_title_id">
+			<option name="TooFar" type="number" default_value="10000" min="1" max="10000" step="10" text="ask_bot_hold_the_point_teleport_distance_title_id"/>
+		</options>
+	</options>
+</table>
