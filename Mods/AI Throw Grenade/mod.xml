@@ -9,6 +9,7 @@
 		cannot_be_disabled="false"
 		early_init="false"
 	>
+	<auto_updates provider="modworkshop" id="25496" version="1"/>
 	<Hooks directory="Hooks">
 		<hook file="teamailogicassault.lua" source_file="lib/units/player_team/logics/teamailogicassault"/>
 	</Hooks>

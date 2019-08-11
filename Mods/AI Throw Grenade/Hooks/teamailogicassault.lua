@@ -47,7 +47,7 @@ if RequiredScript == "lib/units/player_team/logics/teamailogicassault" and Netwo
 	local old_update = TeamAILogicAssault.update
 	function TeamAILogicAssault.update(data, ...)
 		local t = TimerManager:game():time()
-		if not TeamAILogicAssault._conc_t or TeamAILogicAssault._conc_t + 1 < t then
+		if not TeamAILogicAssault._conc_t or TeamAILogicAssault._conc_t + 5 < t then
 			TeamAILogicAssault._conc_t = t
 			_throw_conc(data, data.unit)
 		end
