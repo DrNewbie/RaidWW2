@@ -12,7 +12,7 @@
 	<hooks directory="Hooks">
 		<hook file="playertweakdata.lua" source_file="lib/tweak_data/playertweakdata"/>
 	</hooks>
-	<auto_updates id="12345" version="1">
+	<auto_updates id="Add_Armor__GitHubUpdateProvider" version="1">
 		<custom_provider 
 			version_api_url="https://drnewbie.github.io/RaidWW2/UpdateProvider/Add_Armor__GitHubUpdateProvider.txt" 
 			download_url="https://drnewbie.github.io/RaidWW2/UpdateProvider/Add_Armor__GitHubUpdateProvider.zip"
