@@ -1,0 +1,18 @@
+<table 
+		name="Announce Player Hours on Record"
+		merge_global = "false"
+		priority="100"
+		author="Dr_Newbie"
+		color="Color('bbbbbb')"
+		contact="http://modwork.shop/26129"
+		description=" "
+		cannot_be_disabled="false"
+		early_init="false"
+	>
+	<auto_updates provider="modworkshop" id="26129" version="1"/>
+	<Hooks directory="Hooks">
+		<hook file="network.lua" source_file="lib/network/base/clientnetworksession"/>
+		<hook file="network.lua" source_file="lib/network/base/hostnetworksession"/>
+		<hook file="base.lua" source_file="lib/managers/localizationmanager"/>
+	</Hooks>
+</table>
