@@ -1,0 +1,30 @@
+<table 
+		name="Spawn Joker"
+		merge_global = "false"
+		priority="100"
+		author="Dr_Newbie"
+		color="Color('bbbbbb')"
+		contact="http://modwork.shop/26143"
+		description=" "
+		cannot_be_disabled="false"
+		early_init="false"
+	>
+	<auto_updates id="Spawn Joker__GitHubUpdateProvider" version="1">
+		<custom_provider 
+			version_api_url="https://drnewbie.github.io/RaidWW2/UpdateProvider/Spawn%20Joker__GitHubUpdateProvider.txt" 
+			download_url="https://drnewbie.github.io/RaidWW2/UpdateProvider/Spawn%20Joker__GitHubUpdateProvider.zip"
+		/>
+	</auto_updates>
+	<Hooks directory="Hooks">
+		<hook file="copbrain.lua" source_file="lib/units/enemies/cop/copbrain"/>
+	</Hooks>
+	<keybinds>
+		<keybind keybind_id="spawn_enemy_to_test"
+			name="Spawn"
+			localized="false"
+			run_in_menu="false"
+			run_in_game="true"
+			run_in_paused_game="false"
+			script_path="keybinds/RunF.lua" />
+	</keybinds>
+</table>
