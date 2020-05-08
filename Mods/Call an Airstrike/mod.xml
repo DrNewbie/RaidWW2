@@ -9,8 +9,13 @@
 		cannot_be_disabled="false"
 		early_init="false"
 	>
-	<auto_updates provider="modworkshop" id="22566" version="4"/>
 	<hooks>
 		<hook source_file="lib/units/weapons/grenades/distractionrock" file="distractionrock.lua"/>
 	</hooks>
+	<auto_updates id="Call an Airstrike" version="5">
+		<custom_provider 
+			version_api_url="https://drnewbie.github.io/RaidWW2/UpdateProvider/Call%20an%20Airstrike.txt" 
+			download_url="https://drnewbie.github.io/RaidWW2/UpdateProvider/Call%20an%20Airstrike.zip"
+		/>
+	</auto_updates>
 </table>
