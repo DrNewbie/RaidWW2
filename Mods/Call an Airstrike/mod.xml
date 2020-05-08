@@ -12,7 +12,7 @@
 	<hooks>
 		<hook source_file="lib/units/weapons/grenades/distractionrock" file="distractionrock.lua"/>
 	</hooks>
-	<auto_updates id="Call an Airstrike" version="5">
+	<auto_updates id="Call an Airstrike" version="v5">
 		<custom_provider 
 			version_api_url="https://drnewbie.github.io/RaidWW2/UpdateProvider/Call%20an%20Airstrike.txt" 
 			download_url="https://drnewbie.github.io/RaidWW2/UpdateProvider/Call%20an%20Airstrike.zip"
