@@ -3,7 +3,7 @@ local master_IntimitateInteractionExt_interact_blocked = IntimitateInteractionEx
 function IntimitateInteractionExt:_interact_blocked( player )
 	if self.tweak_data == "corpse_dispose" then
 		if managers.player:chk_body_bags_depleted() then
-			return true, nil, "body_bag_limit_reached"
+			return false, nil
 		end
 		return not managers.player:can_carry("person")
 	end
