@@ -1,0 +1,19 @@
+<table 
+		name="Level 100"
+		merge_global = "false"
+		priority="100"
+		author="Dr_Newbie"
+		color="Color('bbbbbb')"
+		contact="https://modworkshop.net/mod/36232"
+		description="https://modworkshop.net/mod/36232"
+		cannot_be_disabled="false"
+		early_init="false"
+	>
+	<hooks directory="Hooks">
+		<hook file="experience.lua" source_file="lib/tweak_data/tweakdata"/>
+		<hook file="experience.lua" source_file="lib/managers/raidexperiencemanager"/>
+		<hook file="skilltreetweakdata.lua" source_file="lib/tweak_data/skilltreetweakdata"/>
+		<hook file="raidguicontrolskilltree.lua" source_file="lib/managers/menu/raid_menu/controls/raidguicontrolskilltree"/>
+		<hook file="raidguicontrolbranchingprogressbar.lua" source_file="lib/managers/menu/raid_menu/controls/raidguicontrolbranchingprogressbar"/>
+	</hooks>
+</table>
