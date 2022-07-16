@@ -1,5 +1,5 @@
 <table 
-		name="Dallas ''Ahhh...'' as Melee Hitsound"
+		name="Dallas Ahhh... as Melee Hitsound"
 		merge_global = "false"
 		priority="100"
 		author="Dr_Newbie"
@@ -12,7 +12,7 @@
 	<hooks directory="Hooks">
 		<hook file="copdamage.lua" source_file="lib/units/enemies/cop/copdamage"/>
 	</hooks>
-	<auto_updates id="Dallas ''Ahhh...'' as Melee Hitsound" version="1">
+	<auto_updates id="Dallas Ahhh... as Melee Hitsound" version="1">
 		<custom_provider 
 			version_api_url="https://drnewbie.github.io/RaidWW2/UpdateProvider/Dallas%20Ahhh%20as%20Melee%20Hitsound.txt" 
 			download_url="https://drnewbie.github.io/RaidWW2/UpdateProvider/Dallas%20Ahhh%20as%20Melee%20Hitsound.zip"
