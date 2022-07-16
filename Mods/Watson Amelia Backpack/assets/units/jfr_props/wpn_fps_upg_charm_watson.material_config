@@ -1,0 +1,6 @@
+<materials version="3" group="charm">
+	<material name="watson" render_template="generic:DIFFUSE_TEXTURE:GSMA_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/jfr_props/watson_df"/>
+		<bump_normal_texture file="units/jfr_props/watson_nm"/>
+	</material>
+</materials>

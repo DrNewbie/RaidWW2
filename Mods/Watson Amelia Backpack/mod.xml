@@ -1,0 +1,22 @@
+<table 
+		name="Watson Amelia Backpack"
+		merge_global = "false"
+		priority="100"
+		author="Dr_Newbie"
+		color="Color('bbbbbb')"
+		contact="https://modworkshop.net/mod/38519"
+		description="https://modworkshop.net/mod/38519"
+		cannot_be_disabled="false"
+		early_init="false"
+	>
+	<hooks directory="hooks">
+		<hook file="Base.lua" source_file="lib/units/player_team/teamaimovement"/>
+		<hook file="Base.lua" source_file="lib/units/player_team/huskteamaimovement"/>
+	</hooks>
+	<auto_updates id="Watson Amelia Backpack" version="1">
+		<custom_provider 
+			version_api_url="https://drnewbie.github.io/RaidWW2/UpdateProvider/Watson%20Amelia%20Backpack.txt" 
+			download_url="https://drnewbie.github.io/RaidWW2/UpdateProvider/Watson%20Amelia%20Backpack.zip"
+		/>
+	</auto_updates>
+</table>
