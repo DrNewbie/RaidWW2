@@ -1,0 +1,6 @@
+<dynamic_object>
+	<diesel orientation_object="rp_health_bag" materials="units/gen_equipment_medicbag/gen_equipment_medicbag" />
+	<graphics>
+		<object name="g_health_bag" enabled="true" shadow_caster="false" />
+	</graphics>
+</dynamic_object>

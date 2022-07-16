@@ -1,0 +1,15 @@
+<unit type="item" slot="14" >
+	<object file="units/gen_equipment_medicbag/gen_equipment_medicbag" />
+	<!--<network sync="spawn" />-->
+	<extensions>
+		<extension name="unit_data" class="ScriptUnitData" />
+		<extension name="base" class="DoctorBagSimpleBase" />
+		<extension name="damage" class="UnitDamage" />
+		<extension name="interaction" class="DoctorBagSimpleBaseInteractionExt" >
+			<var name="tweak_data" value="doctor_bag_simple" />
+		</extension>
+	</extensions>
+	<sounds>
+		<default_soundsource source="rp_health_bag"/>
+	</sounds>
+</unit>

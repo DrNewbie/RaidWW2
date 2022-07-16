@@ -1,0 +1,33 @@
+<table 
+		name="PDTH Medic Bag"
+		merge_global = "false"
+		priority="100"
+		author="Dr_Newbie"
+		color="Color('bbbbbb')"
+		contact="https://modworkshop.net/mod/38523"
+		description="https://modworkshop.net/mod/38523"
+		cannot_be_disabled="false"
+		early_init="false"
+	>
+	<hooks directory="hooks">
+		<hook file="doctorbagbase.lua" source_file="lib/units/equipment/doctor_bag/doctorbagbase"/>
+		<hook file="interactiontweakdata.lua" source_file="lib/tweak_data/interactiontweakdata"/>
+		<hook file="interactionext.lua" source_file="lib/units/interactions/interactionext"/>
+		<hook file="entry.lua" source_file="lib/units/beings/player/states/playerstandard"/>
+	</hooks>
+	<keybinds>
+		<keybind keybind_id="put_down_equipment"
+			name="Put Down Equipment"
+			localized="false"
+			run_in_menu="false"
+			run_in_game="true"
+			run_in_paused_game="false"
+			script_path="keybinds/RunF.lua" />
+	</keybinds>
+	<auto_updates id="PDTH Medic Bag" version="1">
+		<custom_provider 
+			version_api_url="https://drnewbie.github.io/RaidWW2/UpdateProvider/PDTH%20Medic%20Bag.txt" 
+			download_url="https://drnewbie.github.io/RaidWW2/UpdateProvider/PDTH%20Medic%20Bag.zip"
+		/>
+	</auto_updates>
+</table>
