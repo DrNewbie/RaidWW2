@@ -48,6 +48,7 @@ local old2 = TeamAIInventory._reset_mask_visibility
 local old3 = TeamAIInventory.clbk_mask_unit_loaded
 local old4 = TeamAIInventory.preload_mask
 local old5 = TeamAIInventory.init
+local old6 = TeamAIInventory.pre_destroy
 
 function TeamAIInventory:set_mask_visibility(...)
 	pcall(old1, self, ...)
@@ -68,4 +69,9 @@ end
 function TeamAIInventory:init(...)
 	pcall(old5, self, ...)
 	self:preload_mask()
+end
+
+function TeamAIInventory:pre_destroy(...)
+	self:set_mask_visibility(false)
+	pcall(old6, self, ...)
 end
