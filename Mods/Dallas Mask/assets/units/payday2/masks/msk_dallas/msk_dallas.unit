@@ -1,0 +1,7 @@
+<unit type="static" slot="1" >
+    <object file="units/payday2/masks/msk_dallas/msk_dallas" />
+    <extensions>
+        <extension class="ScriptUnitData" name="unit_data" />
+        <extension class="MaskExt" name="base" />
+    </extensions>
+</unit>
